@@ -13,7 +13,7 @@ const Landing = () => {
           <p>나만의 이야기를 기록하세요</p>
         </div>
         <NavLink to="/login">
-          <Button text="시작하기" className="intro-btn" />
+          <Button text="시작하기" className="intro-btn button" />
         </NavLink>
       </div>
     </section>

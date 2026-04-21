@@ -28,15 +28,19 @@
       margin: 0 auto;
     }
     .t-wrap {
+      padding-top: 30px;
       text-align: center;
+      color: $white;
       h1 {
-        font-size: 2rem;
+        font-size: $font-size-2xl;
         font-weight: bold;
-        color: $white;
+        
       }
       p {
-        font-size: 1.2rem;
+        font-size: $font-size-lg;
       }
     }
+
+    intro-btn
   }
 }
