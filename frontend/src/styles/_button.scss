@@ -1,0 +1,7 @@
+@use 'variables' as *;
+
+.button {
+    background-color: $primary;
+    padding: $py-md $px-lg;
+    border-radius: $radius-lg;
+}

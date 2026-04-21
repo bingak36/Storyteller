@@ -1,6 +1,8 @@
 @use "./styles/variables" as *;
 @use "./styles/mixins" as *;
-@use "./styles/globals";
+@use "./styles/globals" as *;
+@use "@/styles/button" as *;
+
 
 * {
   margin: 0;
