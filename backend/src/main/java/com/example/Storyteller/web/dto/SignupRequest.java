@@ -1,5 +1,11 @@
 package com.example.Storyteller.web.dto;
 
-public record SignipRequest (String name, String email) {
+public record SignupRequest(
+        String name,
+        String email,
+        String password,
+        String passwordConfirm,
+        String phone)
+{
 
 }

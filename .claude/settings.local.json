@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker compose:*)",
+      "Bash(docker exec:*)",
+      "Bash(curl -s \"https://api.github.com/repos/ky-fullstack-2026/2-picstory/git/trees/2-front-basic?recursive=1\")",
+      "Bash(python3 -c ':*)",
+      "Bash(grep -E \"\\\\.\\(java|gradle|yaml\\)$\")",
+      "Bash(gh api:*)",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); [print\\(item['path']\\) for item in data.get\\('tree', []\\) if item['type']=='blob']\")",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(npm install:*)",
+      "Bash(git update-index *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(git add *)"
+    ]
+  }
+}
