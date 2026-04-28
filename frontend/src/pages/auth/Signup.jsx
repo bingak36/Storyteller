@@ -4,6 +4,7 @@ import Button from '@/components/ui/Button'
 import Input from '@/components/ui/Input'
 import { signup as signupApi } from '@/api/auth.api'
 import { useAuth } from '@/store/auth.store'
+import './Auth.scss'
 
 const Signup = () => {
     const navigate = useNavigate()
@@ -55,7 +56,7 @@ const Signup = () => {
                         <div className="form-group">
                             <Input name="name" value={form.name} onChange={handleChange} placeholder="이름을 입력하세요" />
                             <Input type="email" name="email" value={form.email} onChange={handleChange} placeholder="이메일을 입력하세요" />
-                            <Input name="password" value={form.password} onChange={handleChange} type="password" placeholder="비밀번호를 입력하세요 (6자 이상)" />
+                            <Input name="password" value={form.password} onChange={handleChange} type="password" placeholder="비밀번호를 입력하세요 (8자 이상)" />
                             <Input name="passwordConfirm" value={form.passwordConfirm} onChange={handleChange} type="password" placeholder="비밀번호를 다시 입력하세요" />
                             <Input name="phone" value={form.phone} onChange={handleChange} placeholder="전화번호를 입력하세요 (선택)" />
                         </div>

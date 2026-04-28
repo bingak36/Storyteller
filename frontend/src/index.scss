@@ -2,10 +2,15 @@
 @use "./styles/mixins" as *;
 @use "./styles/globals" as *;
 @use "@/styles/button" as *;
+@use "@/pages/posts/Post" as *;
 
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
 }

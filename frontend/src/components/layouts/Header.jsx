@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Button from '../ui/Button'
+import './Header.scss'
 import { logout as logoutApi } from '@/api/auth.api'
 import { useAuth } from '@/store/auth.store'
 

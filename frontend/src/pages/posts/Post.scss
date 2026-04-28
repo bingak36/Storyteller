@@ -1,0 +1,343 @@
+// @use "@/styles/variables" as *;
+
+// .post-section {
+//   position: relative;
+//   z-index: 1;
+
+//   .inner {
+//     max-width: 900px;
+//     margin: 0 auto;
+//     padding: $py-xl $px-md;
+//   }
+
+//   .post-header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding-bottom: $py-lg;
+//     margin-bottom: $my-xl;
+//     border-bottom: 1px solid $border;
+
+//     h2 {
+//       font-size: $font-size-lg;
+//       font-weight: $font-weight-bold;
+//       color: $text-primary;
+//       letter-spacing: 0.02em;
+//     }
+
+//     > div {
+//       display: flex;
+//       gap: $mx-sm;
+//       align-items: center;
+//     }
+
+//     button {
+//       background-color: $bg-soft;
+//       color: $text-secondary;
+//       padding: $py-sm $px-md;
+//       border-radius: $radius-md;
+//       font-size: $font-size-sm;
+//       font-weight: $font-weight-medium;
+//       border: 1px solid $border;
+//       transition: all 0.2s ease;
+
+//       &:hover {
+//         background-color: $white;
+//         color: $primary-dark;
+//         border-color: rgba($primary, 0.3);
+//       }
+//     }
+//   }
+
+//   form {
+//     background-color: $bg-card;
+//     border: 1px solid $border;
+//     border-radius: $radius-lg;
+//     padding: $py-xl $px-xl;
+//     box-shadow: $shadow-md;
+//   }
+
+//   .form-group {
+//     display: flex;
+//     flex-direction: column;
+//     gap: $my-lg;
+
+//     select,
+//     input,
+//     textarea {
+//       width: 100%;
+//       background-color: $bg-base;
+//       border: 1px solid $border;
+//       border-radius: $radius-md;
+//       padding: $py-md $px-md;
+//       color: $text-primary;
+//       font-size: $font-size-base;
+//       font-family: inherit;
+//       transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+
+//       &::placeholder {
+//         color: $text-secondary;
+//         opacity: 0.7;
+//       }
+
+//       &:hover {
+//         border-color: $border-strong;
+//       }
+
+//       &:focus {
+//         border-color: $primary;
+//         background-color: $white;
+//         box-shadow: 0 0 0 3px rgba($primary, 0.15);
+//         outline: none;
+//       }
+//     }
+
+//     textarea {
+//       resize: vertical;
+//       min-height: 200px;
+//       line-height: 1.7;
+//     }
+
+//     select {
+//       max-width: 240px;
+//       cursor: pointer;
+//     }
+
+//     .image-upload {
+//       border: 2px dashed $border-strong !important;
+//       background-color: $bg-soft;
+//       transition: all 0.2s ease;
+
+//       &:hover {
+//         border-color: $primary !important;
+//         background-color: rgba($primary, 0.05);
+//       }
+
+//       span {
+//         color: $text-secondary !important;
+//         font-weight: $font-weight-medium;
+//       }
+//     }
+//   }
+
+//   .btn-wrap {
+//     display: flex;
+//     justify-content: flex-end;
+//     gap: $mx-sm;
+//     margin-top: $my-xl;
+//   }
+
+//   .post-meta {
+//     display: flex;
+//     gap: $mx-md;
+//     font-size: $font-size-sm;
+//     color: $text-secondary;
+//     margin-bottom: $my-xl;
+
+//     span {
+//       display: inline-flex;
+//       align-items: center;
+//       padding: $py-sm $px-md;
+//       background-color: $bg-soft;
+//       border-radius: $radius-full;
+//       font-weight: $font-weight-medium;
+
+//       &:first-child {
+//         background-color: rgba($primary, 0.12);
+//         color: $primary-dark;
+//       }
+//     }
+//   }
+
+//   .post-body {
+//     padding: $py-lg 0;
+//     font-size: $font-size-base;
+//     line-height: 1.8;
+//     color: $text-primary;
+
+//     img {
+//       margin-bottom: $my-xl;
+//       border-radius: $radius-md;
+//       box-shadow: $shadow-md;
+//     }
+
+//     p {
+//       white-space: pre-wrap;
+//     }
+//   }
+
+//   .error-text {
+//     color: $error;
+//     font-size: $font-size-sm;
+//     font-weight: $font-weight-medium;
+//     margin-top: $my-md;
+//   }
+// }
+
+// .post-list {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+//   gap: $mx-lg;
+//   margin-top: $my-xl;
+// }
+
+// .post-card {
+//   display: block;
+//   background-color: $bg-card;
+//   border: 1px solid $border;
+//   border-radius: $radius-lg;
+//   overflow: hidden;
+//   box-shadow: $shadow-sm;
+//   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+//   article {
+//     display: flex;
+//     flex-direction: column;
+//     height: 100%;
+//   }
+
+//   &:hover {
+//     transform: translateY(-4px);
+//     box-shadow: $shadow-lg;
+//     border-color: rgba($primary, 0.35);
+
+//     .post-card-image img {
+//       transform: scale(1.05);
+//     }
+
+//     .post-title {
+//       color: $primary-dark;
+//     }
+//   }
+
+//   .post-card-image {
+//     width: 100%;
+//     aspect-ratio: 16 / 10;
+//     overflow: hidden;
+//     background-color: $bg-soft;
+
+//     img {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//       transition: transform 0.4s ease;
+//     }
+//   }
+
+//   .post-card-body {
+//     display: flex;
+//     flex-direction: column;
+//     gap: $my-sm;
+//     padding: $py-lg $px-lg;
+//     flex: 1;
+//   }
+
+//   .post-category {
+//     display: inline-block;
+//     align-self: flex-start;
+//     font-size: $font-size-sm;
+//     font-weight: $font-weight-semibold;
+//     color: $primary-dark;
+//     background-color: rgba($primary, 0.12);
+//     padding: 3px $px-sm;
+//     border-radius: $radius-full;
+//     letter-spacing: 0.04em;
+//   }
+
+//   .post-title {
+//     font-size: $font-size-md;
+//     font-weight: $font-weight-semibold;
+//     color: $text-primary;
+//     line-height: 1.4;
+//     transition: color 0.2s ease;
+//     display: -webkit-box;
+//     -webkit-line-clamp: 2;
+//     -webkit-box-orient: vertical;
+//     overflow: hidden;
+//   }
+
+//   .post-content {
+//     font-size: $font-size-sm;
+//     color: $text-secondary;
+//     line-height: 1.6;
+//     display: -webkit-box;
+//     -webkit-line-clamp: 2;
+//     -webkit-box-orient: vertical;
+//     overflow: hidden;
+//   }
+// }
+
+// .input-post {
+//   margin-top: $my-lg;
+//   margin-bottom: $my-md;
+
+//   input {
+//     width: 100%;
+//     background-color: $white;
+//     border: 1px solid $border;
+//     border-radius: $radius-full;
+//     padding: $py-md $px-lg;
+//     font-size: $font-size-base;
+//     color: $text-primary;
+//     transition: border-color 0.2s, box-shadow 0.2s;
+
+//     &::placeholder {
+//       color: $text-secondary;
+//       opacity: 0.7;
+//     }
+
+//     &:focus {
+//       border-color: $primary;
+//       box-shadow: 0 0 0 3px rgba($primary, 0.15);
+//       outline: none;
+//     }
+//   }
+// }
+
+// .pagination {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: $mx-md;
+//   margin-top: $my-xl * 1.5;
+
+//   button {
+//     background-color: $bg-card;
+//     color: $text-primary;
+//     border: 1px solid $border;
+//     padding: $py-sm $px-md;
+//     border-radius: $radius-md;
+//     font-weight: $font-weight-medium;
+//     transition: all 0.2s;
+
+//     &:hover:not(:disabled) {
+//       background-color: $bg-soft;
+//       border-color: $primary;
+//       color: $primary-dark;
+//     }
+
+//     &:disabled {
+//       opacity: 0.4;
+//       cursor: not-allowed;
+//     }
+//   }
+
+//   span {
+//     color: $text-secondary;
+//     font-weight: $font-weight-medium;
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .post-section {
+//     form {
+//       padding: $py-lg $px-md;
+//     }
+
+//     .post-header {
+//       flex-direction: column;
+//       align-items: flex-start;
+//       gap: $my-md;
+//     }
+//   }
+// }

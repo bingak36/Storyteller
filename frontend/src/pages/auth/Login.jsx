@@ -4,6 +4,7 @@ import Button from '@/components/ui/Button'
 import Input from '@/components/ui/Input'
 import { login as loginApi } from '@/api/auth.api'
 import { useAuth } from '@/store/auth.store'
+import './Auth.scss'
 
 const Login = () => {
     const navigate = useNavigate()

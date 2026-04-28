@@ -11,6 +11,45 @@
   flex-direction: column;
 }
 
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin card {
+  background-color: $bg-card;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-md;
+}
+
+@mixin soft-input {
+  width: 100%;
+  background-color: $bg-base;
+  border: 1px solid $border;
+  border-radius: $radius-md;
+  padding: $py-md $px-md;
+  color: $text-primary;
+  font-size: $font-size-base;
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+
+  &::placeholder {
+    color: $text-secondary;
+    opacity: 0.7;
+  }
+
+  &:hover {
+    border-color: $border-strong;
+  }
+
+  &:focus {
+    border-color: $primary;
+    background-color: $white;
+    box-shadow: 0 0 0 3px rgba($primary, 0.15);
+  }
+}
+
 @mixin responsive($breakpoint) {
   @if $breakpoint == mobile {
     @media (max-width: 768px) { @content; }
