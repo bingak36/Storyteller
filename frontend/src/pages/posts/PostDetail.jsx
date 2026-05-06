@@ -59,7 +59,7 @@ const PostDetail = () => {
                 </div>
                 <div className="post-body">
                     {post.image && (
-                        <img src={post.image} alt="첨부 이미지" style={{ maxWidth: '100%', borderRadius: '8px', marginBottom: '16px' }} />
+                        <img src={post.image} alt="첨부 이미지" />
                     )}
                     <p>{post.content}</p>
                 </div>

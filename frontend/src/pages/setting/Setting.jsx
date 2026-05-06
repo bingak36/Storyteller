@@ -4,7 +4,7 @@ const Setting = () => {
     return (
         <section className='page'>
             <div className="inner">
-                <h2>설정</h2>
+                <h2 className="page-title">설정</h2>
             </div>
         </section>
     )

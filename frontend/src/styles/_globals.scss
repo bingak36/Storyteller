@@ -51,3 +51,35 @@ select {
   font-weight: $font-weight-medium;
   margin: $my-md 0;
 }
+
+.page-title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $text-primary;
+  margin-bottom: $my-xl;
+  padding-bottom: $py-lg;
+  border-bottom: 1px solid $border;
+}
+
+.info-card {
+  background: $bg-card;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  padding: $py-xl $px-xl;
+  box-shadow: $shadow-sm;
+  display: flex;
+  flex-direction: column;
+  gap: $my-md;
+
+  p {
+    font-size: $font-size-base;
+    color: $text-primary;
+    padding-bottom: $py-md;
+    border-bottom: 1px solid $border;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+}

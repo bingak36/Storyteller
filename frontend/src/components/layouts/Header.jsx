@@ -25,7 +25,7 @@ const Header = () => {
     }
 
     return (
-        <header>
+        <header className="site-header">
             <div className="inner">
                 <h1>
                     <Link to="/app">Storyteller</Link>

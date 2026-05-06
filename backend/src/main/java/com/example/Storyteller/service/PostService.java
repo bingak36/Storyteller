@@ -35,7 +35,7 @@ public class PostService {
         if (memberId == null) throw new IllegalArgumentException("로그인 후 이용해 주세요");
         Member member = memberRepository.findById(memberId)
                 .orElseThrow(() -> new IllegalArgumentException("사용자를 찾을 수 없습니다."));
-        Post post = new Post(request.category(), request.title(), request.content(), member);
+        Post post = new Post(request.category(), request.title(), request.content(), request.image(), member);
         Post savedPost = postRepository.save(post);
         return PostResponse.from(savedPost);
     }
@@ -60,7 +60,7 @@ public class PostService {
                 .orElseThrow(() -> new IllegalArgumentException("게시글이 존재하지 않습니다."));
         if (!post.getMember().getId().equals(memberId))
             throw new IllegalArgumentException("본인이 작성한 글만 수정 가능");
-        post.update(request.category(), request.title(), request.content());
+        post.update(request.category(), request.title(), request.content(), request.image());
         return PostResponse.from(post);
     }
 

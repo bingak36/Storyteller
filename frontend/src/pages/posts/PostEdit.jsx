@@ -86,45 +86,22 @@ const PostEdit = () => {
                         </select>
                         <Input name="title" value={form.title} onChange={handleChange} placeholder="제목을 입력하세요" />
                         <div
-                            className="image-upload"
+                            className={`image-upload${form.image ? ' has-image' : ''}`}
                             onClick={handleImageClick}
-                            style={{
-                                border: '2px dashed #ccc',
-                                borderRadius: '8px',
-                                padding: form.image ? '0' : '40px',
-                                textAlign: 'center',
-                                cursor: 'pointer',
-                                minHeight: '160px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                position: 'relative',
-                                overflow: 'hidden',
-                            }}
                         >
                             {form.image ? (
                                 <>
-                                    <img src={form.image} alt="미리보기" style={{ maxWidth: '100%', maxHeight: '400px', display: 'block' }} />
+                                    <img src={form.image} alt="미리보기" />
                                     <button
                                         type="button"
                                         onClick={handleImageRemove}
-                                        style={{
-                                            position: 'absolute',
-                                            top: '8px',
-                                            right: '8px',
-                                            background: 'rgba(0,0,0,0.6)',
-                                            color: '#fff',
-                                            border: 'none',
-                                            borderRadius: '4px',
-                                            padding: '4px 10px',
-                                            cursor: 'pointer',
-                                        }}
+                                        className="image-remove-btn"
                                     >
                                         삭제
                                     </button>
                                 </>
                             ) : (
-                                <span style={{ color: '#888' }}>클릭하여 이미지를 선택하세요</span>
+                                <span>클릭하여 이미지를 선택하세요</span>
                             )}
                         </div>
                         <input

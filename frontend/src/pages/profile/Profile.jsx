@@ -6,9 +6,9 @@ const Profile = () => {
     return (
         <section className='page'>
             <div className="inner">
-                <h2>내 프로필</h2>
+                <h2 className="page-title">내 프로필</h2>
                 {member && (
-                    <div>
+                    <div className="info-card">
                         <p>이름: {member.name}</p>
                         <p>이메일: {member.email}</p>
                         <p>전화번호: {member.phone || '-'}</p>

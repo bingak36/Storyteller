@@ -1,48 +1,47 @@
-// @use "@/styles/variables" as *;
+@use "@/styles/variables" as *;
 
-// footer {
-//   width: 100%;
-//   background: linear-gradient(180deg, $bg-base 0%, $bg-soft 100%);
-//   border-top: 1px solid $border;
-//   padding: $py-xl $px-xl;
-//   margin-top: auto;
+footer {
+  width: 100%;
+  background: linear-gradient(180deg, $bg-base 0%, $bg-soft 100%);
+  border-top: 1px solid $border;
+  padding: $py-xl $px-xl;
 
-//   p {
-//     max-width: 1200px;
-//     margin: 0 auto;
-//     text-align: center;
-//     font-size: $font-size-sm;
-//     font-weight: $font-weight-medium;
-//     letter-spacing: 0.2em;
-//     text-transform: uppercase;
-//     color: $text-secondary;
+  p {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $text-secondary;
 
-//     &::before,
-//     &::after {
-//       content: '';
-//       display: inline-block;
-//       width: 36px;
-//       height: 1px;
-//       background: linear-gradient(90deg, transparent, $primary, transparent);
-//       vertical-align: middle;
-//       margin: 0 $mx-md;
-//     }
-//   }
-// }
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 36px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, $primary, transparent);
+      vertical-align: middle;
+      margin: 0 $mx-md;
+    }
+  }
+}
 
-// @media (max-width: 768px) {
-//   footer {
-//     padding: $py-lg $px-md;
+@media (max-width: 768px) {
+  footer {
+    padding: $py-lg $px-md;
 
-//     p {
-//       font-size: 10px;
-//       letter-spacing: 0.15em;
+    p {
+      font-size: 10px;
+      letter-spacing: 0.15em;
 
-//       &::before,
-//       &::after {
-//         width: 18px;
-//         margin: 0 $mx-sm;
-//       }
-//     }
-//   }
-// }
+      &::before,
+      &::after {
+        width: 18px;
+        margin: 0 $mx-sm;
+      }
+    }
+  }
+}
